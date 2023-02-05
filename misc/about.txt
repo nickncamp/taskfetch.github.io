@@ -1,0 +1,14 @@
+Welcome to my CS 112 project.
+
+www.taskfetch.com
+
+TaskFetch is an open-source, free online planner.
+
+Website Layout:
+
+
+home	=> to-do list
+		=> contact page
+
+simple but useful!
+Enjoy.

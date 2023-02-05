@@ -1,0 +1,463 @@
+/* This is the styling page for all HTML files  */
+
+/* The following codee applies to multiple pages */
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    cursor: pointer;
+    position: relative;
+    /* padding goes: top right bottom left; */
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    /* max-width: 700px; */
+    margin: auto;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ul li:hover {
+    background: rgb(150, 150, 150);
+}
+
+ul li.checked {
+    background: rgb(150, 150, 150);
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+}
+
+.close:hover {
+    /* background-color: #f44336; */
+    background-color: #cb5b5b;
+    color: white;
+}
+
+.header {
+    background: #3b3b4f;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    /* max-width: 700px; */
+    margin: auto;
+}
+
+.header::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+#myInput {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.addButton {
+    padding: 10px;
+    width: 25%;
+    background-color: rgb(120, 255, 142);
+    color: rgb(13, 13, 13);
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addButton:hover {
+    background-color: rgb(105, 187, 120);
+
+}
+
+.wrapper {
+    /* margin: 30px; */
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    display: block;
+    min-width: 400px;
+    max-width: 800px;
+    /* max-width: 700px; */
+    border: inset rgb(223, 226, 230) 5px;
+    background-color: #eee;
+
+}
+
+body {
+    background: #272F33;
+}
+
+.doglogo-todo {
+    height: 120px;
+    margin-top: 20px;
+}
+
+#header-todo {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+/*     border: solid black 2px; */
+}
+
+.todo-title {
+    font-size: 40px;
+}
+
+/* Home page specific beyond this point */
+
+h3, h4, h2, ul, li {
+    font-family: tahoma;
+}
+
+h1, h3, h4, h2, p {
+    color: #DFEBEF
+}
+
+.home-img {
+    height: 385px;
+
+}
+
+.sub-titles {
+    font-size: 35px;;
+}
+
+.paragraph {
+    font-family: tahoma;
+    font-size: 20px;
+    text-align: center;
+}
+
+.clickme {
+    font-family: tahoma;
+    font-size: 25px;
+}
+
+#title-home {
+    text-align: center;
+    font-family: 'Tahoma';
+    font-size: 50px;
+    display: flex;
+
+
+}
+
+.doglogo {
+    height: 200px;
+    margin-top: 20px;
+}
+
+
+#top-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+#middle-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+#bottom-row {
+    display: flex;
+    justify-content: space-around;
+    position:relative;
+}
+
+.box {
+    /* border: solid black 3px; */
+    width: 45%;
+    height: 400px;
+    text-align: center;
+    
+}
+
+#header-home {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#left-header {
+    height: 40px;
+    width: 60px;
+    margin-top: 20px;
+}
+
+/* HOME page SCROLL TEXT  */
+
+.scroll-left {
+    width: 70%;
+    height: 50px;
+    border: solid #DFEBEF 3px;
+    border-radius: 5px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.scroll-left p {
+    position: relative;
+    width: 1050px;
+    height: 20px;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%); 
+    transform:translateX(100%);
+    /* Apply animation to this element */ 
+    -moz-animation: scroll-left 16s linear infinite;
+    -webkit-animation: scroll-left 16s linear infinite;
+    animation: scroll-left 16s linear infinite;
+    }
+    /* Move it (define the animation) */
+    @-moz-keyframes scroll-left {
+    0% { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+    }
+    @-webkit-keyframes scroll-left {
+    0% { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+    }
+    @keyframes scroll-left {
+    0% { 
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%); 
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Browser bug fix */
+    -webkit-transform: translateX(-100%); /* Browser bug fix */
+    transform: translateX(-100%); 
+    }
+} 
+
+/* HOME page SLIDESHOW  */
+
+#stage {
+    margin: 1em auto;
+    width: 382px;
+    height: 292px;
+}
+
+#stage a {
+    position: relative;
+}
+
+#stage a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    z-index: 20;
+}
+#stage a:nth-of-type(2) {
+    z-index: 10;
+    display: none;
+}
+#stage a:nth-of-type(n+3) {
+    display: none;
+}
+
+@keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 1.0; }
+}
+
+
+/* .header-box {
+    border: solid black 2px;
+} */
+
+
+/* Everything from this point has to do with the menu  */
+
+.menu-button {
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    background:#987c5e;
+    line-height: 0px; 
+    margin-top: 20px;
+    font-family: 'Tahoma';
+}
+
+.menu-button:hover {
+    background: #7f8674;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #DFEBEF;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background: #9ca68e;
+}
+
+.menu:hover .dropdown-content {
+    display: block;
+}
+
+/* contact form styling  */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#subject {
+    height: 120px;
+    width: 300px;
+}
+
+#nameFill {
+    width: 300px;
+}
+
+#email {
+    width: 300px;
+}
+
+.submitButton {
+    width: 300px;
+    cursor: pointer;
+}
+
+.contactBlock {
+    width: 20%;
+    margin: auto;
+} 
+
+#contact-head {
+    width: 20%;
+    margin: auto;
+}
+
+.contact-img {
+    height: 200px;
+    border: solid #7f8674;
+}
+
+/* from other proj */
+
+h1, p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input,
+textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+select {
+    margin: 10px 0 0 0;
+}
+
+input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+}
+
+
+
+
+/* for the fetch image  */
+
+#fetch-img2 {
+    height:50px;
+}
+
+#fetch-img {
+    position: absolute;
+}
+
+/* Greeting */
+
+.greeting {
+    text-align: center;
+}
